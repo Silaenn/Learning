@@ -3,15 +3,13 @@ using UnityEngine;
 public class CollisionHandler : MonoBehaviour
 {
     public SoftbodySimulation softbody; // Referensi ke skrip SoftbodySimulation
-    private Rigidbody rb;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    public GameObject plane; // Referensi ke GameObject plane
 
     void FixedUpdate()
     {
-        softbody.HandleCollision(rb);
+        if (softbody != null && plane != null)
+        {
+            // softbody.HandleCollision(plane);
+        }
     }
 }
