@@ -2,22 +2,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler, IDropHandler
+public class InventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler, IDropHandler, IEndDragHandler
 {
     public InventoryItem item;
     private Image image;
-    private Transform dragParent;
+    [SerializeField] Transform dragParent;
+    Transform originalParent;
+    Vector3 originalPosition;
 
     private void Awake()
     {
         image = GetComponent<Image>();
-        dragParent = GameObject.Find("Canvas").transform;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (item != null)
         {
+            originalParent = transform.parent;
+            originalPosition = transform.position;
             image.raycastTarget = false;
             transform.SetParent(dragParent);
         }
@@ -40,17 +43,28 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IBeginDragHandler, IDr
             item = sourceSlot.item;
             sourceSlot.item = temp;
             UpdateSlotUI();
+            sourceSlot.image.raycastTarget = true;
             sourceSlot.UpdateSlotUI();
+        }
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            image.raycastTarget = true;
+            transform.SetParent(originalParent);
+            transform.position = originalPosition;
         }
     }
 
     public void UpdateSlotUI()
     {
         if (image == null)
-    {
-        Debug.LogWarning($"No Image component on {gameObject.name}");
-        return;
-    }
+        {
+            Debug.LogWarning($"No Image component on {gameObject.name}");
+            return;
+        }
         image.sprite = item?.item.icon ?? null;
         image.enabled = item != null;
     }

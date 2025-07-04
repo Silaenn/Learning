@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9924528, g: 0.4550303, b: 0.4550303, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -541,9 +541,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    item: {fileID: 11400000, guid: 5fa62e70f4531854dbb875317bd4ba1d, type: 2}
+    item: {fileID: 0}
     quantity: 0
-    slotIndex: 2
+    slotIndex: 0
+  dragParent: {fileID: 28710352}
 --- !u!225 &696040618
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -672,7 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8792453, g: 0.740632, b: 0.024884308, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -710,9 +711,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    item: {fileID: 11400000, guid: f92b385e59fdd8042b719c07952cea4f, type: 2}
+    item: {fileID: 0}
     quantity: 0
-    slotIndex: 3
+    slotIndex: 0
+  dragParent: {fileID: 28710352}
 --- !u!225 &1155535781
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -777,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -815,9 +817,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    item: {fileID: 11400000, guid: f1f4fc936eb6bc240903fa4943616832, type: 2}
+    item: {fileID: 0}
     quantity: 0
-    slotIndex: 1
+    slotIndex: 0
+  dragParent: {fileID: 28710352}
 --- !u!225 &1215727159
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1038,7 +1041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.39167896, g: 0.94716984, b: 0.1054397, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1076,9 +1079,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    item: {fileID: 11400000, guid: 8453a63ce109dce499dbae1e7fd977f4, type: 2}
+    item: {fileID: 0}
     quantity: 0
-    slotIndex: 4
+    slotIndex: 0
+  dragParent: {fileID: 28710352}
 --- !u!225 &1494352757
 CanvasGroup:
   m_ObjectHideFlags: 0
