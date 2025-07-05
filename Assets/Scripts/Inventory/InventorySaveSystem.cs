@@ -10,6 +10,7 @@ public class InventorySaveSystem : MonoBehaviour
     private void Awake()
     {
         savePath = Path.Combine(Application.persistentDataPath, "inventory.txt");
+        Debug.Log($"Save Path: {savePath}");
         // Inisialisasi dictionary untuk item
         Item[] items = Resources.FindObjectsOfTypeAll<Item>();
         itemDictionary = new Dictionary<int, Item>();
