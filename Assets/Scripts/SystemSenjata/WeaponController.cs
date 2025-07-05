@@ -34,7 +34,7 @@ public class WeaponController : MonoBehaviour
         {
             bullet.transform.position = firePoint.position;
             bullet.transform.rotation = firePoint.rotation;
-            bullet.GetComponent<Bullet>().damage =  .damage;
+            bullet.GetComponent<Bullet>().damage = weaponData.damage;
             bullet.SetActive(true);
             currentAmmo--;
             nextFireTime = Time.time + weaponData.fireRate;

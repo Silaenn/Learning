@@ -12,7 +12,6 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Debug.Log("Kena");
         currentHealth -= damage;
         if (currentHealth <= 0)
         {

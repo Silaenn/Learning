@@ -6,16 +6,18 @@ public class MeleeWeapon : MonoBehaviour
     [SerializeField] Collider hitbox;
     Animator animator;
     float nextAttackTime;
+    bool isAttacking;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         hitbox.enabled = false;
+        isAttacking = false;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2") && Time.time >= nextAttackTime)
+        if (Input.GetButtonDown("Fire2") && Time.time >= nextAttackTime && !isAttacking)
         {
             Attack();
         }
@@ -23,8 +25,16 @@ public class MeleeWeapon : MonoBehaviour
 
     void Attack()
     {
-        animator.SetTrigger("Swing");
+        isAttacking = true;
+        animator.SetTrigger("Swing"); // Gunakan Trigger, bukan Bool
         nextAttackTime = Time.time + weaponData.fireRate;
+    }
+
+    // Dipanggil oleh Animation Event di akhir animasi
+    public void EndAttack()
+    {
+        isAttacking = false;
+        animator.ResetTrigger("Swing"); // Reset Trigger untuk jaga-jaga
     }
 
     public void EnableHitbox()
@@ -48,5 +58,4 @@ public class MeleeWeapon : MonoBehaviour
             }
         }
     }
-
 }
