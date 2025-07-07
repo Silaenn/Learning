@@ -38,7 +38,7 @@ public class InventoryManager : MonoBehaviour
         {
             Dictionary<Item, int> loadedInventory = saveSystem.LoadInventory();
             inventory.Clear();
-            int slotIndex = 0;
+            int slotIndex = 0;  
             foreach (var pair in loadedInventory)
             {
                 InventoryItem newItem = new InventoryItem
