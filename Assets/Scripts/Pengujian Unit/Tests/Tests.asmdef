@@ -1,0 +1,13 @@
+{
+  "name": "Tests",
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "precompiledReferences": [
+    "Moq.dll",
+    "Castle.Core.dll"
+  ]
+}
