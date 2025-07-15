@@ -1,0 +1,12 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.0.24f1
+CRC: 325120471
+HashAppended: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: tree
+      Dependencies: {}
+    Info_1:
+      Name: cube
+      Dependencies: {}
